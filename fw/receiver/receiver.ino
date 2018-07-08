@@ -42,8 +42,8 @@ void loop()
         Serial.println(data[1]);
         digitalWrite(5, data[1]);
 
-        delay(1);
         radio.stopListening();
+        delay(1);
         sprintf(data, "sd");
         radio.write(data, sizeof(data));
         radio.startListening();
